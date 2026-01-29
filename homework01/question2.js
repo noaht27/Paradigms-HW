@@ -30,6 +30,7 @@ function find(nums) {
     return Number(streak2);
 }
 
+// printing outputs
 console.log(find(nums1));
 console.log(find(nums2));
 console.log(find(nums3));
