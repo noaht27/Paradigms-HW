@@ -11,7 +11,6 @@ nums5 = [null, "house", 9, undefined, "33"];
 nums6 = [33,33,30,33,33,33.0];
 
 function find(nums) {
-    /* your solution goes here */
     let streak = 0;
     let streak2 = 0;
     for (let i = 0; i < nums.length; i++)
@@ -23,11 +22,11 @@ function find(nums) {
             streak = 0; // reset streak
         }
 
-        if (streak2 < streak) {
+        if (streak2 < streak) {     // want longest streak, streak2 only changes if active streak is longer
             streak2 = streak;
         }
     }
-    return Number(streak2);
+    return Number(streak2); // function must return integer
 }
 
 // printing outputs
