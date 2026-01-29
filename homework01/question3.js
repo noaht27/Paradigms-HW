@@ -17,7 +17,8 @@ function enumerate(i,j) {
     return outputs;
 }
 
-function pyramid(end) {
+// This pyramid function will do the pyramid pattern so enumerate isn't messy
+function pyramid(end) { 
     let numerator = 2;          // always starts at 2/2
     let denominator = 2;
     let increase = 2;           // when numerator and denominator increase or decrease, always by 2
