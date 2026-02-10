@@ -23,5 +23,5 @@ function computeBMIs(users){
 }
 
 // Two examples being printed out
-console.log(findUserById(users, 2))
-console.log(computeBMIs(users))
+console.log(findUserById(users, 2));
+console.log(computeBMIs(users));
