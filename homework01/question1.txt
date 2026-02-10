@@ -1,0 +1,30 @@
+Noah Thompson
+28 January 2026
+
+Q1.1
+The first variable in the program is let a = 1; This has global scope because it is 
+declared outside of the function. On line 4, the next variable is declared with var b = 2; 
+This variable b has function, or local scope, because it is declared within the function.
+The next two variable declarations, let c = 3; and let d = 10; both have block scope, because they
+are declared within an if statement. On line 12, var c = 20; is an example of global scope again. It 
+is a variable declared outside of a function. 
+To summarize:
+Line 1: a has global scope
+Line 4: b has local / function scope
+Line 6/7: c and d have block scope
+Line 12: c has global scope
+
+Q1.2
+On line 13, myFunction(); is called which results in the first two numbers that are printed out. Looking at
+line 4, var b is initialized to 2. We then have a conditional on line 5 that checks if b*2 is greater than
+0, which it is, so we now enter our conditional statement. c is set equal to 3, and d is equal to 10 within our block 
+scope. We now print out the sum of a + b + c. Looking on line 1, a has global scope meaning it can be referenced to within 
+the function and there are no issues. So line 8 runs console.log(a + b + c) which equals 1 + 2 + 3 which prints out 6, making 
+sense because that math adds up and matches our output. One side note is that let c = 3; and let d = 10; is specifically able 
+to be block scoped because it is let, while var would not in this case. Later on line 10, console.log(a+b) will reference a which 
+is global in scope and b which is local to the function and will do the math 1 + 2 which prints out 3, exactly what is printed.
+Now the next print occurs on line 15, with console.log(a); This will print 1, because a has global scope and is equal to 1. 
+Line 16 is console.log(c), but the program set c equal to 20 on line 12, and this has global scope as well so console.log(c)
+prints out 20, just as expected. Finally, line 17 is console.log(d); but there is no d variable in global scope, therefore this
+will cause an error to occur. Line 7 declares d but in block scope within a function, so line 17 has no idea what d is in this case,
+resulting in an error to be printed.
