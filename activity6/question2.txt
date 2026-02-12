@@ -1,0 +1,19 @@
+Noah Thompson
+11 February 2026
+question2.txt
+
+This time, the output is:
+0
+1
+2
+This is more expected based on the setup of the for loop. This is because in this example,
+the for loop initializes i using let as opposed to var. One major difference is that let 
+allows for block scoping, where var does not. Var declarations are typically processed before
+any other code, and that is why last time the loop ran all the way through, got var equal to 3 and then
+executed the delayed arrow function. This time however, since i is initialized with let, each time through 
+the loop the arrow function is executed with the current i value, and stopping after i is no longer less than 3. 
+The main reason is each iteration through the loop gets its own i value when using let, because it is block scoped,
+while using var gets priority and therefore the loop updates var to 3 first, then executes the arrow functions. Also
+important to point out that setTimeout () is the reason why question1 prints all 3's, because of the delay var
+just goes ahead and updates i all the way to 3, while each iteration gets its own i value on the iteration for let i = 0 
+because let is block scoped;
