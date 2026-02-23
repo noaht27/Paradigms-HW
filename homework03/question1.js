@@ -26,7 +26,7 @@ function fibonacci(){
     }
 }
 
-// get output (from homework4 document)
+// get output (from homework3 document)
 let fibGenerator1 = fibonacci(); // fibonacci() returns a closure
 let fibGenerator2 = fibonacci(); // fibonacci() returns a closure
 
