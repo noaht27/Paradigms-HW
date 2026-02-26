@@ -1,0 +1,17 @@
+Noah Thompson
+11 February 2026
+question1.txt
+
+The output for this code snippet is:
+3
+3
+3
+The reason this is the output is because i is a free variable in this example. 
+It is a variable that is used, but not declared within the function. This is a case
+of an arrow function. setTimeout schedules the function to run after a delay, and since
+the function is an arrow function what i is referencing is it's most recent value, which is 3
+because by the end of the loop i is equal to 3. var is also function scoped and not block scoped,
+so only what i is at the end of the for loop is valid for what var is going to be. It is going to stay
+at 3. So there is a culmination of reasons why the output is 3 3 3, but primarily because
+var is function scoped and there is a delay to run the console.log(i) so by time it runs, var i is equivalent
+to 3 and therefore it prints 3 3 3. 
