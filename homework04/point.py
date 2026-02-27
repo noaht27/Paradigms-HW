@@ -80,12 +80,16 @@ class Point:
         if dist_p2 >= dist_p1:
             return True
         return False
-    
-# Example outputs
-p1 = Point(2,3)  
-p2 = Point(-3,1) 
-p3 = Point(-2,-3)
-print(p1 > p2)
-print(p1 == p2)
-print(p1 < p2)
-print(p1 == p3)
+
+def main():
+    # Example outputs
+    p1 = Point(2,3)  
+    p2 = Point(-3,1) 
+    p3 = Point(-2,-3)
+    print(p1 > p2)
+    print(p1 == p2)
+    print(p1 < p2)
+    print(p1 == p3)
+
+if __name__ == "__main__":
+    main()
