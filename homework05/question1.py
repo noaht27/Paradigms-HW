@@ -7,7 +7,7 @@
 def move_robot(n):
     # initializing steps list and adding origin / step 0
     steps_list = []
-    steps_list.append(0, 0)
+    steps_list.append((0, 0))
 
     step_count = 1
     turn_track = 1 # i used this to track the 90 degree turns
