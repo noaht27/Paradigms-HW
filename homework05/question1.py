@@ -48,15 +48,15 @@ def move_robot(n):
 def main():
     # these are test cases from examples, and \n is just for spacing on output
     for v in move_robot(4):
-	    print(v)
+        print(v)
     print("\n")
 
     for v in move_robot(0):
-	    print(v)
+        print(v)
     print("\n")
 
     for v in move_robot(2):
-	    print(v)
+        print(v)
 
 if __name__ == "__main__":
     main()
