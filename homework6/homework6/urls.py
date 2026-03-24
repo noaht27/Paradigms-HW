@@ -1,3 +1,5 @@
+# Noah Thompson
+# 24 March 2026
 """
 URL configuration for homework6 project.
 

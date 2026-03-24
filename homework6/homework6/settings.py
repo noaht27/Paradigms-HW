@@ -1,3 +1,5 @@
+# Noah Thompson
+# 24 March 2026
 """
 Django settings for homework6 project.
 

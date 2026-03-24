@@ -1,11 +1,11 @@
+# Noah Thompson
+# 24 March 2026
+
 from django.http import HttpResponse
 from django.shortcuts import render
 from blog.models import Post
 from django.core.paginator import Paginator
 from django.views.generic import DetailView
-
-def homepage(request):
-    return render(request, template_name="index.html")
 
 def index(request):
     # i just decided to order posts by publication since professor did so

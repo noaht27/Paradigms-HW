@@ -1,3 +1,6 @@
+# Noah Thompson
+# 24 March 2026
+
 from django.db import models
 
 # Create your models here.
