@@ -17,9 +17,13 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from blog import views
+from django.views.generic import RedirectView
 
 urlpatterns = [
+    # user can go to djangos default admin path
     path("admin/", admin.site.urls),
-    #path('blog/', include('blog.urls')),
+    # or user can go to blog urls, and here we let blog handle rest
+    path("blog/", include("blog.urls")),
+    # i added this line too so default goes to blog if user enters nothing instead of just messy error screen
+    path("", RedirectView.as_view(url='/blog')),
 ]

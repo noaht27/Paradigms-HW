@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}View{% endblock %}
+
+{% block content %}
+<head><b style="font-size: 30px;">{{ post.title}} </b></head>
+    <p>
+        <b>Author: </b> {{ post.author_name }}
+    </p> 
+    <p>
+        <b>Published: </b> {{  post.pub_date}}
+    </p> 
+    <div>
+        {{  post.content  }}
+    </div>
+{% endblock %}
