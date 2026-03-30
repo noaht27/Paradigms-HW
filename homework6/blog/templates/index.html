@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Index{% endblock %}
+
+{% block content %}
+<head><b style="font-size: 30px;">List of all blog posts</b></head>
+    <ul>
+    {% for post in posts %}
+        <li>
+            <a href="{%  url "blog:view" post.id %}">
+            {{ post.title }} by {{  post.author_name  }} ({{ post.pub_date }})
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+    <!--I used this from professors slides and changed a little bit!-->
+    <div class="pagination">
+        <span class="step-links">
+            {% if posts.has_previous %}
+                <a href="?page=1">&laquo; previous</a>
+            {% endif %}
+            <span class="current">
+                Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+            </span>
+            {% if posts.has_next %}
+                <a href="?page={{ posts.next_page_number }}">next &raquo;</a>
+            {% endif %}
+        </span>
+     </div>
+{% endblock %}
