@@ -6,7 +6,6 @@ from django.db.models import Sum
 
 # Q1.1: Write a query that retrieve all questions: 
 all_questions = Question.objects.all()
-print(all_questions)
 
 # Q1.2: Write a query that retrieve all the choices for the question with a primary key equals to 1:
 choices_for_q1 = Choice.objects.filter(question__pk=1)
