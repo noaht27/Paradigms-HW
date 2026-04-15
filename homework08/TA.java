@@ -3,12 +3,13 @@
 // Student.java
 
 public class TA extends UniversityMember{
-    private Course[] coursesAssisting = new Course[2];
+    private Course[] coursesAssisting;
     private int index = 0;
 
     // constructor for TA
     public TA(String name, String id, String email){
         super(name, id, email);
+        this.coursesAssisting = new Course[2];
     }
     
     // abstract method from University Member
@@ -42,5 +43,21 @@ public class TA extends UniversityMember{
     // getCoursesAssisting getter method
     public Course[] getCoursesAssisting(){
         return this.coursesAssisting;
+    }
+
+    // override toString to get human readable string representation of object
+    @Override
+    public String toString(){
+        String[] coursecodes = new String[coursesAssisting.length];
+
+        // have to get individual course codes
+        for (int i = 0; i < coursesAssisting.length; i++){
+            coursecodes[i] = coursesAssisting[i].getCode();
+        }
+
+        //course codes need to be comma separated
+        String joined = String.join(", ", coursecodes);
+        
+        return getName() + "(" + getEmail() + "). TA for Courses: "+ joined;
     }
 }

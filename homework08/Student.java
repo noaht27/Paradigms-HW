@@ -8,6 +8,9 @@ public class Student extends UniversityMember{
     // constructor for student
     public Student(String name, String id, String email, String major){
         super(name, id, email);
+        if (major == null) {
+            throw new IllegalArgumentException("Major cannot be null");
+        }
         this.major = major;
     }
 
@@ -20,5 +23,10 @@ public class Student extends UniversityMember{
     // getMajor getter method
     public String getMajor(){
         return this.major;
+    }
+
+    @Override
+    public String toString(){
+        return getName() + "(" + getEmail() + ") - Major: " + getMajor();
     }
 }

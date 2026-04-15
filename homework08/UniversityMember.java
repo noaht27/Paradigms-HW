@@ -8,6 +8,9 @@ public abstract class UniversityMember{
 
     // public constructor taking name id and email
     public UniversityMember(String name, String id, String email){
+        if (name == null || id == null || email == null){
+            throw new IllegalArgumentException("UniversityMember parameters cannot be null");
+        }
         this.name = name;
         this.id = id;
         this.email = email;
