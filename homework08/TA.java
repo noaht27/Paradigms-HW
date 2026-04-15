@@ -48,16 +48,16 @@ public class TA extends UniversityMember{
     // override toString to get human readable string representation of object
     @Override
     public String toString(){
-        String[] coursecodes = new String[coursesAssisting.length];
+        String[] coursecodes = new String[this.index];
 
         // have to get individual course codes
-        for (int i = 0; i < coursesAssisting.length; i++){
+        for (int i = 0; i < this.index; i++){
             coursecodes[i] = coursesAssisting[i].getCode();
         }
 
         //course codes need to be comma separated
         String joined = String.join(", ", coursecodes);
-        
-        return getName() + "(" + getEmail() + "). TA for Courses: "+ joined;
+
+        return getName() + " (" + getEmail() + "). TA for Courses: "+ joined;
     }
 }

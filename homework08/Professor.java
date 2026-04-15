@@ -31,6 +31,6 @@ public class Professor extends UniversityMember{
         String fullName = getName();
         // looked this up as a way to get only the last name, use lastIndexOf " " for the space between first and last name
         String lastName = fullName.substring(fullName.lastIndexOf(" ") + 1);
-        return "Prof. " + lastName + "(" + getEmail() + ")";
+        return "Prof. " + lastName + " (" + getEmail() + ")";
     }
 }

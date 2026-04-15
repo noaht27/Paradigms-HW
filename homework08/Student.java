@@ -27,6 +27,6 @@ public class Student extends UniversityMember{
 
     @Override
     public String toString(){
-        return getName() + "(" + getEmail() + ") - Major: " + getMajor();
+        return getName() + " (" + getEmail() + ") - Major: " + getMajor();
     }
 }
