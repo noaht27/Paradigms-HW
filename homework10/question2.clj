@@ -16,4 +16,5 @@
 (def amount 117)
 (def rate 7)
 
-(printf "Tax for this product is $%.2f\n" (taxation/tax amount rate))
+;; only wanted 2 decimal places, printing out but calling from taxation namespace
+(println (format "Tax for this product is $%.2f" (taxation/tax amount rate)))
